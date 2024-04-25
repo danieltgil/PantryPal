@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import { SafeAreaView, FlatList, Button, TouchableOpacity } from "react-native";
 import { SearchBar } from "react-native-elements";
 import { getAllActors } from "../../constants/Constants";
-import { MovieCell } from "./components/MovieCell";
+import { IngredientCell } from "./components/IngredientCell";
 import { styles } from "./MovieListScreen.styles";
-ƒ
+
 // We can use JSON files by simply requiring them.
 const TABLE_DATA = require("../../assets/recepies.json");
 
-// Input: navigation & route params, which we recieve through React Navigation
 // Output: a screen containing the list of movies
 export default function MovieListScreen({ navigation, route }) {
   const [search, setSearch] = useState("");
@@ -16,13 +15,13 @@ export default function MovieListScreen({ navigation, route }) {
 
 
   // TODO: Fill out the methods below.
-  const selectedMovie = (movie) => {
+  const selectedRecepie = (recepie) => {
     // console.log(movieItem.title);
     return (
     <TouchableOpacity
-      onPress={()=> navigation.navigate('About', { item: movieItem })}>
-      <MovieCell movieItem = {movieItem}>
-      </MovieCell>
+      onPress={()=> navigation.navigate('About', { item: recepieItem })}>
+      <IngredientCell recepieItem = {recepieItem}>
+      </IngredientCell>
     </TouchableOpacity>);
   };
 
@@ -62,38 +61,37 @@ export default function MovieListScreen({ navigation, route }) {
 
   // Renders a row of the FlatList.
   const renderItem = ({ item }) => {
-    const overlapFound = (listA, listB) => {
-      let foundActor = false;
-      listA.forEach((x) => {
-        if (listB.includes(x)) {
-          foundActor = true;
-        }
-      });
-      return foundActor;
-    };
+  //   const overlapFound = (listA, listB) => {
+  //     let foundActor = false;
+  //     listA.forEach((x) => {
+  //       if (listB.includes(x)) {
+  //         foundActor = true;
+  //       }
+  //     });
+  //     return foundActor;
+  //   };
 
     // TODO: Set up search & filter criteria.
     let meetsSearchCriteria = true;
-    let meetsActorsCriteria = true;
 
     if (search) {
       const currSearch = search.toLowerCase();
-      const currTitle = item.title.toLowerCase();
-      if (!currTitle.includes(currSearch)) {
+      const currName = item.name.toLowerCase();
+      if (!currName.includes(currSearch)) {
         meetsSearchCriteria = false;
       }
     }
     // console.log(item.actors)
     // console.log(actors)
-    if (route.params != undefined) {
-      if (!overlapFound(actors, item.actors)) {
-        meetsActorsCriteria = false;
-      }
-   }
+  //   if (route.params != undefined) {
+  //     if (!overlapFound(actors, item.actors)) {
+  //       meetsActorsCriteria = false;
+  //     }
+  //  }
 
-    if (meetsSearchCriteria && meetsActorsCriteria) {
+    if (meetsSearchCriteria) {
       // TODO: Return a MovieCell, wrapped by a TouchableOpacity so we can handle taps.
-      return selectedMovie(item);
+      return selectedRecepie(item);
     } else {
       // If the item doesn't meet search/filter criteria, then we can
       // simply return null and it won't be rendered in the list!

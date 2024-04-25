@@ -8,10 +8,10 @@ import {
   Button,
 } from "react-native";
 
-import { getAllActors } from "../../constants/Constants";
+//import { getAllActors } from "../../constants/Constants";
 import { styles } from "./MovieFilterScreen.styles";
 
-const ALL_ACTORS = getAllActors();
+// const ALL_ACTORS = getAllActors();
 
 // Input: navigation & route params, which we recieve through React Navigation
 // Output: a Movie Filter Screen component, which displays a list of actors to filter on.
