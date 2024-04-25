@@ -15,6 +15,8 @@ export default function HomeScreen({navigation, route}) {
       </TouchableOpacity>
       <TouchableOpacity style={styles.recipeButton} onPress={()=> navigation.navigate('Recipe Box')}>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.pantryButton} onPress={()=> navigation.navigate('My Pantry')}>
+      </TouchableOpacity>
     </View>
   );
 }

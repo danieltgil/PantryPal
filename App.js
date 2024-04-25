@@ -4,10 +4,10 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import RecepieBox from "./screens/RecepieBox/RecepieBox.main";
-import MovieDetailScreen from "./screens/MovieDetailScreen/MovieDetailScreen.main";
-import MovieFilterScreen from "./screens/MovieFilterScreen/MovieFilterScreen.main";
+import RecipeDetailScreen from "./screens/RecipeDetailScreen/RecipeDetailScreen.main";
 import HomeScreen from "./screens/HomeScreen/HomeScreen.main";
 import Shop4Groceries from "./screens/Shop4GroceriesScreen/Shop4Groceries.main";
+import MyPantry from "./screens/MyPantry/MyPantry.main";
 /* TODO: 
 
   This app has three screens:
@@ -30,11 +30,9 @@ export default function App() {
       <Stack.Group>
         <Stack.Screen name = "Pantry Pal" component = {HomeScreen}/>
         <Stack.Screen name = "Recipe Box" component = {RecepieBox}/>
-        <Stack.Screen name = "Recipe" component = {MovieDetailScreen}/>
+        <Stack.Screen name = "My Pantry" component = {MyPantry}/>
+        <Stack.Screen name = "Recipe" component = {RecipeDetailScreen}/>
         <Stack.Screen name = "Shop4Groceries" component = {Shop4Groceries}/>
-      </Stack.Group>
-      <Stack.Group screenOptions = {{presentation:'modal'}}> 
-        <Stack.Screen name = "Filter Movies" component={MovieFilterScreen}/>
       </Stack.Group>
     </Stack.Navigator>
 </NavigationContainer>;

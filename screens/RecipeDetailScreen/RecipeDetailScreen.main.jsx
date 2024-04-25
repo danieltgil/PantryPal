@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, Text, Image, ScrollView } from "react-native";
-import { styles } from "./MovieDetailScreen.styles";
+import { styles } from "./RecipeDetailScreen.styles";
 import { getAllIngredients } from "../../constants/Constants";
 
 export default function MovieDetailScreen({ navigation, route }) {

@@ -20,5 +20,15 @@ export const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         justifyContent: 'center',
         alignItems: 'center',
-    }
+    },
+    pantryButton: {
+        position: 'absolute',
+        top: 240, // adjust this value to position the button vertically
+        left: 90, // adjust this value to position the button horizontally
+        width: 250,
+        height: 70,
+        backgroundColor: 'transparent',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
 });

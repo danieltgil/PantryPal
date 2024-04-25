@@ -2,7 +2,7 @@ import {React, useState, useEffect} from 'react';
 import { Image, View, TouchableOpacity, } from 'react-native';
 import { styles } from "./Shop4GroceriesStyles.style";
 
-const ScreenComponent = () => {
+export default function Shop4Groceries({navigation, route}) {
     const [checked, setChecked] = useState(false);
       
     const toggleCheckbox = () => {
@@ -23,6 +23,3 @@ const ScreenComponent = () => {
     </View>
   );
 }
-
-
-export default ScreenComponent;
