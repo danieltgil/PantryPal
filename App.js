@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import RecepieBox from "./screens/RecepieBox/RecepieBox.main";
 import MovieDetailScreen from "./screens/MovieDetailScreen/MovieDetailScreen.main";
 import MovieFilterScreen from "./screens/MovieFilterScreen/MovieFilterScreen.main";
+import HomeScreen from "./screens/HomeScreen/HomeScreen.main";
 /* TODO: 
 
   This app has three screens:
@@ -25,7 +26,8 @@ const Stack = createStackNavigator();
 export default function App() {
   return <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Group> 
+      <Stack.Group>
+        <Stack.Screen name = "Pantry Pal" component = {HomeScreen}/>
         <Stack.Screen name = "Recipe Box" component = {RecepieBox}/>
         <Stack.Screen name = "Recipe" component = {MovieDetailScreen}/>
       </Stack.Group>
