@@ -3,7 +3,7 @@ import React from "react";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import MovieListScreen from "./screens/MovieListScreen/MovieListScreen.main";
+import RecepieBox from "./screens/RecepieBox/RecepieBox.main";
 import MovieDetailScreen from "./screens/MovieDetailScreen/MovieDetailScreen.main";
 import MovieFilterScreen from "./screens/MovieFilterScreen/MovieFilterScreen.main";
 /* TODO: 
@@ -26,8 +26,8 @@ export default function App() {
   return <NavigationContainer>
     <Stack.Navigator>
       <Stack.Group> 
-        <Stack.Screen name = "Movie Catalog" component = {MovieListScreen}/>
-        <Stack.Screen name = "About" component = {MovieDetailScreen}/>
+        <Stack.Screen name = "Recipe Box" component = {RecepieBox}/>
+        <Stack.Screen name = "Recipe" component = {MovieDetailScreen}/>
       </Stack.Group>
       <Stack.Group screenOptions = {{presentation:'modal'}}> 
         <Stack.Screen name = "Filter Movies" component={MovieFilterScreen}/>

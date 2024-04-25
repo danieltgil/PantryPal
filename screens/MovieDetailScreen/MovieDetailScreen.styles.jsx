@@ -38,9 +38,9 @@ export const styles = StyleSheet.create({
   },
   h4: {
     fontFamily: "Avenir",
-    fontSize: 18,
+    fontSize: 21,
     fontWeight: "300",
     marginTop: 20,
-    textAlign: "center",
+    textAlign: "left",
   },
 });

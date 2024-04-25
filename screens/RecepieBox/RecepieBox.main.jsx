@@ -1,25 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { SafeAreaView, FlatList, Button, TouchableOpacity } from "react-native";
 import { SearchBar } from "react-native-elements";
-import { getAllActors } from "../../constants/Constants";
+//import { getAllActors } from "../../constants/Constants";
 import { IngredientCell } from "./components/IngredientCell";
-import { styles } from "./MovieListScreen.styles";
+import { styles } from "./RecepieBoxStyles.style";
 
 // We can use JSON files by simply requiring them.
 const TABLE_DATA = require("../../assets/recepies.json");
 
 // Output: a screen containing the list of movies
-export default function MovieListScreen({ navigation, route }) {
+export default function RecepieBox({ navigation, route }) {
   const [search, setSearch] = useState("");
   const [actors, setActors] = useState([]);
 
 
   // TODO: Fill out the methods below.
-  const selectedRecepie = (recepie) => {
+  const selectedRecepie = (recepieItem) => {
     // console.log(movieItem.title);
     return (
     <TouchableOpacity
-      onPress={()=> navigation.navigate('About', { item: recepieItem })}>
+      onPress={()=> navigation.navigate('Recipe', { item: recepieItem })}>
       <IngredientCell recepieItem = {recepieItem}>
       </IngredientCell>
     </TouchableOpacity>);

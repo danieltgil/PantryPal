@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image, Text } from "react-native";
-import { styles } from "../MovieListScreen.styles";
+import { styles } from "../RecepieBoxStyles.style";
 
 export const IngredientCell = ({ recepieItem }) => {
   // TODO: Create and return the MovieCell component.
