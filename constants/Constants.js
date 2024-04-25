@@ -1,6 +1,8 @@
-const movies = require("../assets/movies.json");
+const movies = require("../assets/recepies.json");
 
 // This function returns a sorted list of all actors in our movie dataset.
+
+//Change this for the recepie names
 export function getAllActors() {
   let actors = new Set();
   movies.forEach((movie) => {

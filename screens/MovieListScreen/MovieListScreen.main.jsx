@@ -4,9 +4,9 @@ import { SearchBar } from "react-native-elements";
 import { getAllActors } from "../../constants/Constants";
 import { MovieCell } from "./components/MovieCell";
 import { styles } from "./MovieListScreen.styles";
-
+ƒ
 // We can use JSON files by simply requiring them.
-const TABLE_DATA = require("../../assets/movies.json");
+const TABLE_DATA = require("../../assets/recepies.json");
 
 // Input: navigation & route params, which we recieve through React Navigation
 // Output: a screen containing the list of movies
@@ -16,7 +16,7 @@ export default function MovieListScreen({ navigation, route }) {
 
 
   // TODO: Fill out the methods below.
-  const selectedMovie = (movieItem) => {
+  const selectedMovie = (movie) => {
     // console.log(movieItem.title);
     return (
     <TouchableOpacity
