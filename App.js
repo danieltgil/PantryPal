@@ -7,6 +7,7 @@ import RecepieBox from "./screens/RecepieBox/RecepieBox.main";
 import MovieDetailScreen from "./screens/MovieDetailScreen/MovieDetailScreen.main";
 import MovieFilterScreen from "./screens/MovieFilterScreen/MovieFilterScreen.main";
 import HomeScreen from "./screens/HomeScreen/HomeScreen.main";
+import Shop4Groceries from "./screens/Shop4GroceriesScreen/Shop4Groceries.main";
 /* TODO: 
 
   This app has three screens:
@@ -30,6 +31,7 @@ export default function App() {
         <Stack.Screen name = "Pantry Pal" component = {HomeScreen}/>
         <Stack.Screen name = "Recipe Box" component = {RecepieBox}/>
         <Stack.Screen name = "Recipe" component = {MovieDetailScreen}/>
+        <Stack.Screen name = "Shop4Groceries" component = {Shop4Groceries}/>
       </Stack.Group>
       <Stack.Group screenOptions = {{presentation:'modal'}}> 
         <Stack.Screen name = "Filter Movies" component={MovieFilterScreen}/>

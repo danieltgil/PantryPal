@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, View, TouchableOpacity } from 'react-native';
 import { styles } from "./HomeScreenStyles.style";
+// import { stylesGroceries } from "./Shop4GroceriesStyles.style"
 
 export default function HomeScreen({navigation, route}) {
   return (
@@ -10,7 +11,9 @@ export default function HomeScreen({navigation, route}) {
         style={{ width: 1000, height: 890 }} 
         resizeMode="contain" 
       />
-      <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Recipe Box')}>
+       <TouchableOpacity style={styles.shop4GroceryButton} onPress={()=> navigation.navigate('Shop4Groceries')}>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.recipeButton} onPress={()=> navigation.navigate('Recipe Box')}>
       </TouchableOpacity>
     </View>
   );
